@@ -1,0 +1,298 @@
+@import 'variables';
+@import 'mixins';
+
+.footer {
+	padding-top: 4rem;
+	background: $back-footer;
+	max-height: 35rem;
+	
+	@media screen and (max-width: $tablet) {
+		padding-top: 3rem;
+		max-height: 63.9rem;
+	
+		& .wrapper {
+			flex-direction: column;
+		}
+	}
+	
+	@media screen and (max-width: $mobile) {
+		max-height: 100%;
+	}
+	
+	
+	&__content {
+		flex: 1;
+		display: flex;
+		margin-bottom: 6rem;
+		margin-top: 1.5rem;
+		padding-right: 16.5rem;
+		justify-content: space-between;
+	
+		@media screen and (max-width: $tablet) {
+			margin-top: 0;
+			padding-right: 0;
+			justify-content: space-around;
+			margin-bottom: 6.5rem;
+		}
+	
+		@media screen and (max-width: $mobile) {
+			flex-direction: column;
+			row-gap: 3.5rem;
+			margin-bottom: 4.2rem;
+		}
+	
+	}
+	
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-top: 0.2rem;
+	
+		@media screen and (max-width: $tablet) {
+			row-gap: 3.2rem;
+		}
+	
+		@media screen and (max-width: $mobile) {
+			align-items: center;
+			row-gap: 3.8rem;
+		}
+	
+		&-title {			
+			@include h3();
+			color: $color-ligth-xl;
+			max-height: 9rem;
+	
+			@media screen and (max-width: $mobile) {
+				display: none;
+			}
+	
+			& span {
+				display: block;
+				font-size: 3.5rem;
+	
+				@media screen and (max-width: $mobile) {
+					display: none;
+				}
+			}
+	
+		}
+	
+		&-title-mobile {
+			@include h3();
+			color: $color-ligth-xl;
+			max-height: 9rem;
+			display: none;
+	
+			@media screen and (max-width: $mobile) {
+				display: block;
+				font-size: 2.5rem;
+				text-align: center;
+				letter-spacing: 0.06em;
+			}
+	
+			& span {
+				display: none;
+	
+				@media screen and (max-width: $mobile) {
+					display: block;
+					font-size: 2.5rem;
+					text-align: center;
+					letter-spacing: 0.06em;
+				}
+			}
+			
+		}
+	
+		&-mail {
+			display: flex;
+			align-items: center;
+	
+			@media screen and (max-width: $mobile) {
+				column-gap: 0;
+			}
+	
+			
+			&-text {
+				color: $color-basic;
+				text-align: center;
+				font-family: $font-geo;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 2rem;
+				line-height: 115%;
+				text-decoration: none;
+				padding-left: 2rem;
+				letter-spacing: 0.12rem;
+			}
+		}
+	
+		&-phone {
+			display: flex;
+			align-items: center;
+	
+			@media screen and (max-width: $mobile) {
+				column-gap: 0;
+			}
+	
+			&-text {
+				color: $color-basic;
+				text-align: center;
+				font-family: $font-geo;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 2rem;
+				line-height: 115%;
+				text-decoration: none;
+				padding-left: 2rem;
+				letter-spacing: 0.12rem;
+			}
+		}
+	
+	}
+	
+	&__locations {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-top: 0.2rem;
+	
+		@media screen and (max-width: $tablet) {
+			row-gap: 3.2rem;
+			margin-right: 0.5rem;
+		}
+	
+		@media screen and (max-width: $mobile) {
+			margin-right: 0;
+			align-items: center;
+			row-gap: 3.8rem;
+		}
+	
+		&-title {
+			@include h3();
+			color: $color-ligth-xl;
+			max-height: 9rem;
+	
+			@media screen and (max-width: $mobile) {
+				display: none;
+			}
+	
+			& span {
+				display: block;
+				font-size: 3.5rem;
+	
+				@media screen and (max-width: $mobile) {
+					display: none;
+				}
+			}
+	
+		}
+	
+		&-title-mobile {
+			@include h3();
+			color: $color-ligth-xl;
+			max-height: 9rem;
+			display: none;
+	
+			@media screen and (max-width: $mobile) {
+				display: block;
+				font-size: 2.5rem;
+				text-align: center;
+				letter-spacing: 0.06em;
+			}
+	
+			& span {
+				display: none;
+	
+				@media screen and (max-width: $mobile) {
+					display: block;
+					font-size: 2.5rem;
+					text-align: center;
+					letter-spacing: 0.06em;
+				}
+			}
+			
+		}
+	
+		&-marker {
+			cursor: pointer;
+		}
+	
+		&-address {
+			display: flex;
+			align-items: center;
+	
+			.footer__locations-place {
+				color: $color-basic;
+				text-align: center;
+				font-family: $font-geo;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 2rem;
+				line-height: 115%;
+				text-decoration: none;
+				padding-left: 2rem;
+				text-align: start;
+	
+				& span {
+					display: block;
+					letter-spacing: 0.13rem;
+					font-size: 2rem;
+				}
+			}
+			
+	
+	
+			@media screen and (max-width: $mobile) {
+				column-gap: 0;
+	
+				&-two {
+					padding-right: 2.7rem;
+				}
+			}
+	
+	
+		
+	
+			&-link {
+				color: $color-basic;
+				text-align: center;
+				font-family: $font-geo;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 2rem;
+				line-height: 115%;
+				text-decoration: none;
+				padding-left: 2rem;
+				text-align: start;
+	
+				& span {
+					display: block;
+					letter-spacing: 0.13rem;
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+	
+	&__image-wrapper {
+	
+		@media screen and (max-width: $tablet) {
+			align-self: center;
+		}
+	
+		@media screen and (max-width: $mobile) {
+			max-width: 26rem;
+			max-height: 26.9rem;
+		}
+	}
+	
+	&__image {
+	
+		@media screen and (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+	
+	}
+	

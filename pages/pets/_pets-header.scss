@@ -1,0 +1,139 @@
+@import 'variables';
+
+.pets-header {
+	width: 100vw;
+	max-width: 100%;
+	position: sticky;
+	top: 0;
+	left: 0;
+	min-height: 12rem;
+	display: flex;
+	align-items: center;
+	background-color: $color-ligth-xl;
+	z-index: 70;
+
+	@media screen and (max-width: $mobile) {
+		position: absolute;
+	}
+	
+	@media screen and (max-width: $tablet) {
+		.wrapper {
+			max-height: 6rem;
+		}
+	}
+
+		
+		.logo {
+			display: flex;
+			flex-direction: column;
+			cursor: pointer;
+			
+			&__title-link {
+				color: $color-dark-l;
+				font-family: $font-geo;
+				font-size: 3.2rem;
+				letter-spacing: 0.2rem;
+				line-height: 110%;
+				font-weight: 400;
+				text-decoration: none;
+			}
+	
+			&__subtitle {
+				color: $color-dark-3xl;
+				font-size: 1.3rem;
+				line-height: 110%;
+				margin-top: 10px;
+				text-align: center;
+				letter-spacing: 0.18rem;
+				font-weight: 400;
+			}
+		}
+	
+		.nav {
+			display: flex;
+			width: 44rem;
+	
+			@media screen and (max-width: $mobile) {
+				display: none;
+			}
+			
+			.list {
+				list-style-type: none;
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+			
+				&__item {
+					display: flex;
+					align-items: center;
+					
+					.list__link {
+						font-family: $font-arial;
+						font-size: 1.5rem;
+						color: $color-dark-l;
+						line-height: 160%;
+						font-weight: 400;
+						cursor: pointer;
+						transition: 0.5s;
+						
+						&-active {
+							border-bottom: solid 3px $color-basic;
+							// color: $color-dark-3xl;
+						}
+
+						&-modified {
+							color: $color-dark-l;
+							text-decoration: none;
+							transition: 0.5s;
+
+							&:hover {
+								color: $color-dark-3xl;
+							}
+						}
+					}
+				}
+			}
+		}
+	
+		.burger {
+			display: none;
+			transition: all 0.8s ease 0s;
+
+			@media screen and (max-width: $mobile) {
+				display: block;
+				width: 3rem;
+				height: 2.2rem;
+				// margin-right: 4.3rem;
+				cursor: pointer;
+				z-index: 20;
+				padding-top: 1.1rem;
+				margin-right: 4.3rem;
+	
+				.line {
+					width: 3rem;
+					height: 0.2rem;
+					background-color: black;
+					margin: 0.8rem auto;
+					z-index: 70;
+					transition: all 0.5s ease-in-out;
+	
+				}
+			}
+	
+		}
+
+		.active {
+			transform: rotate(90deg) translate(19px, -18px);
+		}
+
+		.header-active {
+			position: absolute;
+			right: 1rem;
+		}
+	
+		.logo-active {
+			padding-right: 4rem;
+		}
+
+	
+	}
