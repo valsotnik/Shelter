@@ -1,0 +1,1079 @@
+@import 'footer';
+@import 'variables';
+@import 'header';
+@import 'mixins';
+@import 'popup';
+
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-o-box-sizing: border-box;
+font-size: 10px;
+}
+
+html {
+	scroll-behavior: smooth; 
+}
+
+body {
+	/* max-width: 128rem; */
+	margin: 0 auto;
+	
+}
+
+.noscroll {
+	overflow: hidden;
+}
+
+.wrapper {
+	max-width: 120rem;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+	/* flex: 1; */
+
+	@media screen and (max-width: $tablet) {
+		max-width: calc(100% - 6rem);
+	}
+	@media screen and (max-width: $mobile) {
+		max-width: 30rem;
+		// margin: 0;
+	}
+}
+
+.shadow {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 60;
+	background: rgba(41, 41, 41, 0.6);
+	// display: none;
+	opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease 0s;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.shadowing-on {
+	opacity: 1;
+  visibility: visible;
+}
+
+
+/* =========MAIN======================== */
+
+
+.main {
+display: flex;
+flex-direction: column;
+
+.not-only {
+	display: flex;
+	background: $back-screen;
+	padding-top: 18rem;
+	
+	@media screen and (max-width: $tablet) {
+		padding-top: 14.5rem;
+		max-height: 116.5rem;
+	}
+
+	@media screen and (max-width: $mobile) {
+		max-height: 82.3rem;
+		padding-top: 15rem;
+	}
+
+	&__content {
+		display: flex;
+
+		@media screen and (max-width: $tablet) {
+			flex-direction: column;
+			align-items: center;
+			max-width: 56.9rem;
+		}
+
+		@media screen and (max-width: $mobile) {
+			flex-direction: column;
+			align-items: center;
+			max-width: 56.9rem;
+		}
+
+		&-section {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-bottom: 84px;
+			max-width: 46rem;
+			margin-right: 4rem;
+
+			@media screen and (max-width: $tablet) {
+				padding-bottom: 0;
+				margin-right: 0;
+			}
+
+			&-title {
+				color: $color-ligth-xl;
+				font-size: 4.4rem;
+				line-height: 130%;
+				font-family: $font-geo;
+				max-width: 31rem;
+				font-weight: 400;
+				padding-top: 0.5rem;
+
+				@media screen and (max-width: $tablet) {
+					max-height: 11.4rem;
+				}
+
+				@media screen and (max-width: $mobile) {
+					font-size: 2.5rem;
+					text-align: center;
+					padding-top: 0;
+					max-width: 21rem;
+					align-self: center;
+					letter-spacing: 0.15rem;
+					max-height: 6.4rem;
+				}
+			}
+
+			&-subtitle {
+				color: $color-dark-s;
+				line-height: 160%;
+				margin-top: 4rem;
+				font-family: $font-arial;
+				font-weight: 400;
+				font-size: 1.5rem;
+
+				@media screen and (max-width: $tablet) {
+					margin-top: 4.7rem;
+				}
+
+				@media screen and (max-width: $mobile) {
+					margin-top: 4.2rem;
+					text-align: center;
+				}
+			}
+
+			&-button {
+				padding: 1.5rem 4.5rem;
+				max-width: 20.7rem;
+				border-radius: 10rem;
+				border: none;
+				background-color: $color-basic;
+				margin-top: 4rem;
+				cursor: pointer;
+				outline: none;
+				transition: 0.5s;
+
+				@media screen and (max-width: $tablet) {
+					width: 20.7rem;
+					height: 5.2rem;
+					align-self: center;
+					margin-top: 4.4rem;
+				}
+
+				@media screen and (max-width: $mobile) {
+					margin-top: 4.2rem;
+				}
+
+				&:hover {
+					background-color: $color-ligth;
+				}
+
+				&-link {
+					text-decoration: none;
+					font-family: $font-geo;
+					line-height: 130%;
+					font-size: 1.7rem;
+					letter-spacing: 0.1rem;
+					color: $color-dark-3xl;
+				}
+			}
+		}
+
+		&-image-wrapper {
+			display: flex;
+
+			@media screen and (max-width: $tablet) {
+				padding-top: 10rem;
+				position: relative;
+				left: 70px;
+			}
+
+			@media screen and (max-width: $mobile) {
+				left: 0;
+				align-self: flex-end;
+				padding-top: 10.5rem;
+				padding-bottom: 0.23rem;
+			}
+
+			.not-only__image {
+				width: 100%;
+				min-width: 69.8rem;
+				max-width: 72.8rem;
+
+				@media screen and (max-width: $tablet) {
+					min-width: calc(100% - 15.9rem);
+					min-height: 59.3rem;
+					height: 59.3rem;
+				}
+
+				@media screen and (max-width: $mobile) {
+					min-width: 26rem;
+					min-height: 27.177rem;
+					height: 27.177rem;
+				}
+			}
+		}
+		
+
+
+	}
+}
+
+.about {
+	display: flex;
+
+	@media screen and (max-width: $mobile) {
+		max-height: 97.4rem;
+		padding-top: 4.2rem;
+		align-items: center;
+			 /* May be a nesting problem */
+	.wrapper {
+		width: 120rem;    
+		justify-content: center;
+	}
+
+	&__wrapper {
+		display: flex;
+		padding: 8rem 17.5rem 10rem 17.5rem;
+		width: 100%;
+		justify-content: space-between;
+
+		@media screen and (max-width: $tablet) {
+			padding: 8rem 13.6rem 10rem 13.7rem;
+			flex-direction: column-reverse;
+		}
+
+		@media screen and (max-width: $mobile) {
+			padding: 0;
+			margin-bottom: 42px;
+		}
+	}
+
+	&__image-wrapper {
+		display: flex;
+	 
+		@media screen and (max-width: $tablet) {
+			padding-top: 8rem;
+			align-self: center;
+		}
+
+		@media screen and (max-width: $mobile) {
+			align-self: center;
+			padding-top: 4.2rem;
+		}
+
+		&-icon {
+			width: 100%;
+
+			@media screen and (max-width: $tablet) {
+				max-width: 30rem;
+				max-height: 40.8rem;
+			}
+
+			@media screen and (max-width: $mobile) {
+				max-width: 260px;
+				max-height: 353.6px;
+			}
+		}
+		}
+
+	}
+
+	.wrapper {
+		width: 120rem;    
+		justify-content: center;
+	}
+
+	&__wrapper {
+		display: flex;
+		padding: 8rem 17.5rem 10rem 17.5rem;
+		width: 100%;
+		justify-content: space-between;
+
+		@media screen and (max-width: $tablet) {
+			flex-direction: column-reverse;
+			padding: 8rem 13.6rem 10rem 13.7rem;
+		}
+
+		@media screen and (max-width: $mobile) {
+			padding: 0;
+			margin-bottom: 4.2rem;
+		}
+		
+	}
+
+	&__image-wrapper {
+		display: flex;
+
+		@media screen and (max-width: $tablet) {
+			padding-top: 8rem;
+			align-self: center;
+		}
+
+		@media screen and (max-width: $mobile) {
+			align-self: center;
+			padding-top: 4.2rem;
+		}
+
+		&-icon {
+			width: 100%;
+
+			@media screen and (max-width: $mobile) {
+				max-width: 260px;
+				max-height: 353.6px;
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		max-width: 43rem;
+		justify-content: center;
+
+		@media screen and (max-width: $tablet) {
+			max-height: 49.4rem;
+			align-self: center;
+		}
+
+		&-title {
+			@include h3();
+
+			@media screen and (max-width: $mobile) {
+				@include h3-mobile();
+				text-align: center;
+				letter-spacing: 0.15rem;
+			}
+
+			& span {
+				display: block;
+				font-size: 3.5rem;
+
+				@media screen and (max-width: $mobile) {
+					font-size: 2.5rem;
+				}
+			}
+		}
+
+		&-description {
+			margin-top: 2.5rem;
+
+			@media screen and (max-width: $mobile) {
+				text-align: justify;
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+			}
+
+			& p {
+				font-family: $font-arial;
+				font-weight: normal;
+				font-style: normal;
+				font-size: 1.5rem;
+				line-height: 160%;
+				color: $color-dark-xl;
+
+				&:nth-child(2) {
+					margin-top: 2.5rem;
+				}
+			}
+		}
+	
+	}
+
+
+}
+
+.pets {
+	padding-top: 8rem;
+	padding-bottom: 10rem;
+	background-color: $color-ligth-l;
+
+	@media screen and (max-width: $mobile) {
+		padding-top: 4rem;
+		padding-bottom: 4.2rem;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
+
+	&__title {
+		@include h3();
+		text-align: center;
+		// min-width: 40rem;
+		max-height: 9rem;
+
+		& span {
+			display: block;
+			font-size: 3.5rem;
+
+			@media screen and (max-width: $mobile) {
+				font-size: 2.5rem;
+				line-height: 130%;
+			}
+		}
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+
+		@media screen and (max-width: $mobile) {
+			flex-direction: column;
+			position: relative;
+		}
+
+		&-slider-btn {
+			@include pets-slider-button();
+	
+
+			@media screen and (max-width: $mobile) {
+				display: none;
+			}
+
+			&:hover {
+				background-color: $color-ligth;
+				box-shadow: none;
+			}
+		}
+
+		&-cards {
+			display: flex;
+			padding: 6rem 0.8rem;
+
+			@media screen and (max-width: $tablet) {
+				padding: 6rem 1.2rem;
+				column-gap: 40px;
+			}
+
+			@media screen and (max-width: $mobile) {
+				padding: 0;
+				padding: 4.3rem 1.3rem 2rem;
+			}
+
+			.pets-card__item {
+				display: flex;
+				flex-direction: column;
+				border-radius: 0.9rem;
+				// margin: 0 4.5rem;
+				height: 43.5rem;
+				width: 27rem;
+				cursor: pointer;
+
+				&:nth-child(3n) {
+					@media screen and (max-width: $tablet) {
+						display: none;
+					}
+				}
+
+				&:nth-child(2n) {
+					@media screen and (max-width: $mobile) {
+						display: none;
+					}
+				}
+
+				&:hover {
+					box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+				}
+
+				&-image {
+					width: 100%;
+				}
+
+				&-content {
+					display: flex;
+					flex-direction: column;
+					padding-bottom: 3rem;
+					align-items: center;
+
+					&-title {
+						font-family: $font-geo;
+						font-style: normal;
+						font-weight: normal;
+						font-size: 2rem;
+						line-height: 115%;
+						text-align: center;
+						margin: 3rem 0;
+						letter-spacing: 0.1rem;
+
+						@media screen and (max-width: $mobile) {
+							font-size: 2rem;
+							letter-spacing: 0.15rem;
+						}
+					}
+
+					&-button {
+						@include pets-card-button();
+			
+
+						&:hover {
+							background-color: $color-ligth;
+							box-shadow: none;
+						}
+					}
+					
+				}
+			}
+		}
+
+		&-slider-btn-reverse {
+			@include pets-slider-button();
+	
+			transform: rotate(180deg);
+
+			@media screen and (max-width: $mobile) {
+				display: none;
+			}
+
+			&:hover {
+				background-color: $color-ligth;
+				box-shadow: none;
+			}
+		}     
+	}
+
+	&__slider-mobile {
+		display: none;
+
+		.slider-btn {
+			@include pets-slider-button();
+	
+
+			&:hover {
+				background-color: $color-ligth;
+				box-shadow: none;
+			}
+		}
+
+		.slider-btn-reverse {
+			@include pets-slider-button();
+	
+			transform: rotate(180deg);
+
+			&:hover {
+				background-color: $color-ligth;
+				box-shadow: none;
+			}
+		}
+
+		@media screen and (max-width: $mobile) {
+			display: flex;
+			column-gap: 8rem;
+			margin-bottom: 4.2rem;
+		}
+	}
+
+	&__button {
+		padding: 1.5rem 4.5rem;
+		border-radius: 10rem;
+		border: none;
+		background-color: $color-basic;
+		line-height: 130%;
+		font-size: 1.7rem;
+		letter-spacing: 0.1rem;
+		cursor: pointer;
+		outline: none;
+		transition: 0.5s;
+		max-height: 5.2rem;
+
+		@media screen and (max-width: $tablet) {
+			height: 5.2rem;
+			width: 26rem;
+			padding: 0;
+		}
+
+		@media screen and (max-width: $mobile) {
+			height: 5.2rem;
+			width: 26rem;
+			padding: 0;
+		}
+
+		&:hover {
+			background-color: $color-ligth;
+		}
+
+		&-link {
+			text-decoration: none;
+			font-family: $font-geo;
+			line-height: 130%;
+			font-size: 1.7rem;
+			letter-spacing: 0.1rem;
+			color: $color-dark-3xl;
+		}
+		
+	}
+}
+
+.help {
+	padding-top: 8rem;
+	padding-bottom: 10rem;
+
+	@media screen and (max-width: $mobile) {
+		padding-top: 4.2rem;
+		padding-bottom: 4.3rem;
+	}
+	
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+
+		@media screen and (max-width: $mobile) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__title {
+		@include h3();
+		text-align: center;
+		max-height: 9rem;
+
+		@media screen and (max-width: $mobile) {
+			font-size: 2.5rem;
+			letter-spacing: 0.15rem;
+		}
+
+		& span {
+			display: block;
+			font-size: 3.5rem;
+
+			@media screen and (max-width: $mobile) {
+				font-size: 2.5rem;
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		column-gap: 11.9rem;
+		row-gap: 5.5rem;
+		padding: 6rem 8.7rem 0 8.7rem;
+		
+		@media screen and (max-width: $tablet) {
+			display: grid;
+			grid-template-rows: 11.3rem 11.3rem 11.3rem;
+			grid-template-columns: 17rem 17rem 17rem;
+			column-gap: 9.5%;
+			padding-top: 6rem;
+			padding-left: 3.9rem;
+			padding-right: 3.9rem;
+		}
+
+		@media screen and (max-width: $mobile) {
+			grid-template-rows: 87px 87px 87px 87px 87px ;
+			grid-template-columns: 130px 130px;
+			row-gap: 3rem;
+			column-gap: 10vw;
+			padding: 0;
+			padding-top: 4rem;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media screen and (max-width: $tablet) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@media screen and (max-width: $mobile) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&-icon {
+			@media screen and (max-width: $mobile) {
+				width: 50px;
+				height: 50px;
+			}
+
+		}
+
+		&-title {
+			color: $color-dark-l;
+			text-align: center;
+			margin-top: 3rem;
+			font-family: $font-geo;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 2rem;
+			line-height: 115%;
+			letter-spacing: 0.12rem;
+
+			@media screen and (max-width: $mobile) {
+				font-size: 1.5rem;
+				margin-top: 2.4rem;
+				letter-spacing: 0.08rem;
+			}
+		}
+	}
+	
+
+}
+
+.donation {
+	padding-top: 8rem;
+	padding-bottom: 10rem;
+	background-color: $color-ligth-l;
+
+	@media screen and (max-width: $mobile) {
+		padding-top: 4.2rem;
+		padding-bottom: 4.2rem;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		max-height: 28.2rem;
+
+		@media screen and (max-width: $tablet) {
+			flex-direction: column-reverse;
+			align-items: center;
+			max-height: 78.3rem;
+		}
+
+		@media screen and (max-width: $mobile) {
+			flex-direction: column-reverse;
+			align-items: center;
+			max-height: 78.3rem;
+		}
+	}
+
+	&__image-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-right: 3rem;
+
+		@media screen and (max-width: $tablet) {
+			padding-right: 0;
+			padding-top: 6rem;
+		}
+
+		@media screen and (max-width: $mobile) {
+			padding-right: 0;
+			padding-top: 4.2rem;
+		}
+	}
+
+	&__image {
+		@media screen and (max-width: $mobile) {
+			max-width: 260px;
+		}
+
+	}
+
+	&__content {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		// min-width: 38rem;
+
+		@media screen and (max-width: $tablet) {
+			max-height: 28.2rem;
+		}
+
+		@media screen and (max-width: $mobile) {
+			min-width: none;
+		}
+	}
+
+	&__title {
+		@include h3();
+
+		@media screen and (max-width: $mobile) {
+			font-size: 2.5rem;
+			align-self: center;
+			text-align: center;
+			letter-spacing: 0.15rem;
+		}
+
+		& span {
+			display: block;
+			font-size: 3.5rem;
+
+			@media screen and (max-width: $mobile) {
+				font-size: 2.5rem;
+			}
+		}
+	}
+	
+	&__subtitle {
+		margin-top: 2rem;
+		color: $color-dark-l;
+		font-family: $font-geo;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 1.5rem;
+		line-height: 110%;
+		letter-spacing: 0.09rem;
+
+		@media screen and (max-width: $mobile) {
+			letter-spacing: 0;
+			align-self: center;
+			margin-top: 2.3rem;
+		}
+	}
+	
+	&__pay {
+		margin-top: 2rem;
+		display: flex;
+		padding: 1rem 1.5rem;
+		border-radius: 1rem;
+		border: none;
+		background-color: $color-basic;
+		line-height: 130%;
+		font-size: 1.7rem;
+		letter-spacing: 0.1rem;
+		cursor: pointer;
+		outline: none;
+		transition: 0.5s;
+
+		@media screen and (max-width: $mobile) {
+			margin-top: 2.5rem;
+			align-self: center;
+			padding: 0;
+			padding: 1rem 1.2rem;
+		}
+
+		&:hover {
+			background-color: $color-ligth;
+		}
+
+		&-number {
+			padding-left: 1.5rem;
+			padding-right: 0.5rem;
+			font-family: $font-geo;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 2rem;
+			line-height: 115%;
+			text-decoration: none;
+			color: $color-dark-l;
+
+			@media screen and (max-width: $mobile) {
+				font-size: 1.5rem;
+			}
+		}
+	}
+
+	&__description {
+		font-family: $font-arial;
+		font-style: italic;
+		font-weight: 400;
+		font-size: 1.2rem;
+		line-height: 150%;
+		margin-top: 2rem;
+		color: $color-dark-m;
+		max-width: 38rem;
+
+		@media screen and (max-width: $mobile) {
+			max-width: 28rem;
+			align-self: center;
+			text-align: justify;
+		}
+	}
+	
+}
+
+}
+
+.burger-menu {
+	display: none;
+	transition: all 0.8s ease 0s;
+
+	@media screen and (max-width: $mobile) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: fixed;
+		top: 0;
+		right: -32rem;
+		width: 32rem;
+		height: 100%;
+		background-color: #292929;
+		z-index: 65;
+	}
+
+
+
+	.list {
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+		row-gap: 4rem;
+		margin-bottom: 2.5rem;
+	
+		&__item {
+			display: flex;
+			align-items: center;
+			
+			.list__link {
+				font-family: $font-arial;
+				font-size: 3.2rem;
+				color: $color-ligth-l;
+				line-height: 160%;
+				font-weight: 400;
+				cursor: pointer;
+				transition: 0.5s;
+
+				&:hover {
+					color: $color-ligth-s;
+				}
+				
+				&-active {
+					border-bottom: solid 3px $color-basic;
+				}
+				&-modified {
+					color: $color-dark-s;
+					text-decoration: none;
+					transition: 0.5s;
+				}
+			}
+		}
+	}
+
+
+}
+
+.open {
+	right: 0;
+}
+
+// ======PETS CAROUSEL=======
+
+.carousel {
+	display: flex;
+	position: relative;
+	left: -1025px;
+  gap: 8rem;
+
+	@media screen and (max-width: $tablet)  {
+		left: -620px;
+		gap: 4rem;
+	}
+
+	@media screen and (max-width: $mobile)  {
+		left: -283px;
+		gap: 0;
+	}
+}
+
+.cards {
+	display: flex;
+	gap: 9rem;
+
+	@media screen and (max-width: $tablet)  {
+		gap: 4rem;
+	}
+}
+
+.carousel-wrapper {
+    width: 1096px;
+		overflow: hidden;
+
+		@media screen and (max-width: $tablet)  {
+			width: 604px;
+		}
+
+		@media screen and (max-width: $mobile)  {
+			width: 270px;
+		}
+}
+
+@keyframes move-left {
+  from {left: -1025px;}
+  to {left: -2095px;}
+}
+	@media screen and (max-width: $tablet)  {
+		@keyframes move-left {
+			from {left: -620px;}
+			to {left: -1240px;}
+	}
+}
+
+@media screen and (max-width: $mobile)  {
+	@keyframes move-left {
+		from {left: -283px;}
+		to {left: -553px;}
+}
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 3s;
+
+	@media screen and (max-width: $tablet)  {
+		animation-duration: 2s;
+	}
+
+	@media screen and (max-width: $mobile)  {
+		animation-duration: 1.5s;
+}
+}
+
+
+
+@keyframes move-right {
+  from {left: -1025px;}
+  to {left: 45px;}
+}
+	@media screen and (max-width: $tablet)  {
+		
+		@keyframes move-right {
+			from {left: -620px;}
+			to {left: 0px;}
+	  }
+	}
+
+	@media screen and (max-width: $mobile)  {
+		@keyframes move-right {
+			from {left: -283px;}
+			to {left: -13px;}
+	}
+}
+
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 3s;
+
+	@media screen and (max-width: $tablet)  {
+		animation-duration: 2s;
+	}
+
+	@media screen and (max-width: $mobile)  {
+		animation-duration: 1.5s;
+}
+}

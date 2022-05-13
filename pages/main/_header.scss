@@ -1,0 +1,138 @@
+@import 'variables';
+@import 'mixins';
+
+
+.header {
+	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	top: 6rem;
+	left: 0;
+	z-index: 70;
+	transition: all 0.8s ease 0s;
+	@media screen and (max-width: $tablet) {
+		top: 3rem;
+	}
+	
+	.wrapper {
+		min-height: 6rem;
+		
+
+		
+		.logo {
+			display: flex;
+			flex-direction: column;
+			cursor: pointer;
+			
+			&__title {
+				color: $color-basic;
+				font-family: $font-geo;
+				font-size: 3.2rem;
+				letter-spacing: 0.2rem;
+				line-height: 110%;
+				font-weight: 400;
+			}
+	
+			&__subtitle {
+				color: $color-ligth-xl;
+				font-size: 1.3rem;
+				line-height: 110%;
+				margin-top: 10px;
+				text-align: center;
+				letter-spacing: 0.18rem;
+				font-weight: 400;
+			}
+		}
+	
+		.nav {
+			display: flex;
+			width: 44.3rem;
+	
+			@media screen and (max-width: $mobile) {
+				display: none;
+			}
+			
+			.list {
+				list-style-type: none;
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+			
+				&__item {
+					display: flex;
+					align-items: center;
+					
+					.list__link {
+						font-family: $font-arial;
+						font-size: 1.5rem;
+						color: $color-ligth-l;
+						line-height: 160%;
+						font-weight: 400;
+						cursor: pointer;
+						transition: 0.5s;
+
+						&:hover {
+							color: $color-ligth-s;
+						}
+						
+						&-active {
+							border-bottom: solid 3px $color-basic;
+						}
+						&-modified {
+							color: $color-dark-s;
+							text-decoration: none;
+							transition: 0.5s;
+						}
+					}
+				}
+			}
+		}
+	
+		.burger {
+			display: none;
+			transition: all 0.8s ease 0s;
+
+			@media screen and (max-width: $mobile) {
+				display: block;
+				width: 3rem;
+				height: 2.2rem;
+				// margin-right: 4.3rem;
+				cursor: pointer;
+				z-index: 50;
+				padding-top: 1.1rem;
+				margin-right: 4.3rem;
+	
+				.line {
+					width: 3rem;
+					height: 0.2rem;
+					background-color: $color-basic;
+					margin: 0.8rem auto;
+					z-index: 70;
+					transition: all 0.5s ease-in-out;
+	
+				}
+			}
+	
+		}
+
+		
+		.active {
+			transform: rotate(90deg) translate(19px, -18px);
+		}
+
+
+
+
+	}
+
+	.header-active {
+		position: absolute;
+		right: 1rem;
+	}
+
+	.logo-active {
+		padding-right: 4rem;
+	}
+}
+
+
