@@ -1,4 +1,9 @@
 # Shelter app project
-### Shelter is a project that implements an adaptive and interactive website consisting of two pages.
 ### [Deploy](https://valsotnik.github.io/Shelter/pages/main/index.html)
+* Double page adaptive layout.
+* Infinite slider (carousel) with non-repeating elements.
+* Popup modal window by clicking on the pet card is implemented.
+* Introduced pagination menu of pet cards.
+* Navigation transforms into a burger menu for small screen resolutions
+
 ![shel](https://user-images.githubusercontent.com/91071613/168233722-660cacd1-20f6-45c8-a5ec-68967bdf4eef.png)
