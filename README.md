@@ -1,5 +1,5 @@
 # Shelter app project
-### [Deploy](https://valsotnik.github.io/Shelter/pages/main/index.html)
+### [Deploy](https://valsotnik.github.io/Shelter-app/pages/main/index.html)
 * Double page adaptive layout.
 * Infinite slider (carousel) with non-repeating elements.
 * Popup modal window by clicking on the pet card is implemented.
